@@ -1,11 +1,11 @@
 {
-  "name": "bull",
-  "version": "0.2.4",
-  "description": "Job manager",
+  "name": "bodacious",
+  "version": "0.0.1",
+  "description": "Job manager with multiple store support, based on Bull",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/OptimalBits/bull.git"
+    "url": "git://github.com/makesites/bodacious.git"
   },
   "keywords": [
     "job",
@@ -13,9 +13,8 @@
     "task",
     "parallel"
   ],
-  "author": "OptimalBits",
+  "author": "makesites",
   "license": "MIT",
-  "readmeFilename": "README.md",
   "dependencies": {
     "bluebird": "~2.3.0",
     "lodash": "~2.2.1",
