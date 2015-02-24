@@ -1,35 +1,35 @@
 {
-  "name": "bodacious",
-  "version": "0.0.1",
-  "description": "Job manager with multiple store support, based on Bull",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/makesites/bodacious.git"
-  },
-  "keywords": [
-    "job",
-    "queue",
-    "task",
-    "parallel"
-  ],
-  "author": "makesites",
-  "license": "MIT",
-  "dependencies": {
-    "bluebird": "~2.3.0",
-    "lodash": "~2.2.1",
-    "node-uuid": "~1.4.1",
-    "redis": "~0.8.4",
-    "semver": "^4.2.0",
-    "when": "~2.1.1"
-  },
-  "devDependencies": {
-    "expect.js": "~0.2.0",
-    "sinon": "~1.12.1",
-    "mocha": "~1.21.4"
-  },
-  "scripts": {
-    "test": "mocha test/* --reporter spec",
-    "postpublish": "git push && git push --tags"
-  }
+	"name": "bodacious",
+	"version": "0.0.1",
+	"author": "makesites",
+	"description": "Job manager with multiple store support, based on Bull",
+	"keywords": [
+		"job",
+		"queue",
+		"task",
+		"parallel"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/makesites/bodacious.git"
+	},
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha test/* --reporter spec",
+		"postpublish": "git push && git push --tags"
+	},
+	"dependencies": {
+		"bluebird": "~2.3.0",
+		"lodash": "~2.2.1",
+		"node-uuid": "~1.4.1",
+		"redis": "~0.8.4",
+		"semver": "^4.2.0",
+		"when": "~2.1.1"
+	},
+	"devDependencies": {
+		"expect.js": "~0.2.0",
+		"sinon": "~1.12.1",
+		"mocha": "~1.21.4"
+	}
 }
