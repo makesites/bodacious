@@ -18,7 +18,7 @@ Distributed through [Makesites.org](http://makesites.org)
 
 ### Thanks
 
-Originally based on [Bull](https://github.com/OptimalBits/bull) app by [OptimalBits](https://github.com/OptimalBits)
+Originally based on [Bull](https://github.com/OptimalBits/bull) by [OptimalBits](https://github.com/OptimalBits)
 
 ### License
 
