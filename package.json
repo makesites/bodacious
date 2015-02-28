@@ -1,6 +1,6 @@
 {
 	"name": "bodacious",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"author": "makesites",
 	"description": "Job manager with multiple store support, based on Bull",
 	"keywords": [
