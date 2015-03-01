@@ -31,15 +31,10 @@ CRUD.prototype = {
 		data = data || {};
 		var key = data.id || false;
 		if( !key ) return callback(null, false);
-		var expires = (data.expires_in) ? parseInt(data.expires_in) : 86400000; // default one day...
-		// if refresh_token, add 60 days...
-		if( data.refresh_token) expires += (60 * 86400000); // plus 60 days for refresh_token
-		// convert ttl to seconds
-		var ttl = Math.floor( expires / 1000 );
 		// stringify data
 		data = JSON.stringify(data);
 		// connect to db
-		this.db.setex( key, ttl, data, function(err, result){
+		this.db.set( key, data, function(err, result){
 			if(err) return callback(err);
 			// error control?
 			return callback( null, true );
@@ -75,8 +70,8 @@ CRUD.prototype = {
 		prefix = prefix || "";
 
 		this.db.keys( prefix +"*", function(err, keys) {
-			if( callback ) return callback( keys );
-			return keys;
+			// error control?
+			return callback( null, keys );
 		});
 
 	},

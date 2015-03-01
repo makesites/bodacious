@@ -42,8 +42,7 @@ CRUD.prototype = {
 				if( !valid ) delete keys[i];
 			}
 		}
-		if( callback ) return callback( keys );
-		return keys;
+		callback( null, keys );
 	}
 
 }
