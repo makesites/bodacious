@@ -34,7 +34,7 @@ CRUD.prototype = {
 	// - list of items
 	list: function(prefix, callback){
 		var keys = Object.keys( data );
-		// filet out the keys
+		// filter keys
 		if( !_.isEmpty(prefix) ){
 			for( var i in keys ){
 				//
