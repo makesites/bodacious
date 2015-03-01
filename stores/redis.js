@@ -9,7 +9,16 @@ var redis = require('redis');
 var CRUD = function( options ){
 
 	// use the provided db (error control?)
-	this.db = options.db || redis.createClient(options.redis.port, options.redis.host, options.redis.opt);
+	if( options.db ){
+		this.db = options.db
+	} else {
+		this.db = redis.createClient(options.redis.port, options.redis.host, options.redis.opt);
+		// select the database
+		this.db.select(options.redis.database, function(err,res){
+			// you'll want to check that the select was successful here
+			// if(err) return err;
+		});
+	}
 
 }
 
