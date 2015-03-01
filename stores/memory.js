@@ -4,6 +4,9 @@
  * Note: Highly inefficient & unreliable - do NOT use in production
 **/
 
+var _ = require("underscore");
+
+
 var CRUD = function( options ){
 
 	// use the built-in methods
@@ -25,7 +28,24 @@ CRUD.prototype = {
 
 	destroy: function(item, callback){
 		this.db.destroy( item, callback );
+	},
+
+	// Helpers
+	// - list of items
+	list: function(prefix, callback){
+		var keys = Object.keys( data );
+		// filet out the keys
+		if( !_.isEmpty(prefix) ){
+			for( var i in keys ){
+				//
+				var valid = keys[i].indexOf( prefix ) == 0;
+				if( !valid ) delete keys[i];
+			}
+		}
+		if( callback ) return callback( keys );
+		return keys;
 	}
+
 }
 
 // Helpers

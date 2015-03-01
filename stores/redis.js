@@ -67,6 +67,20 @@ CRUD.prototype = {
 			callback( null, true );
 		});
 	},
+
+	// Helpers
+	// - list a set of keys
+	list: function( prefix, callback ){
+		// fallback
+		prefix = prefix || "";
+
+		this.db.keys( prefix +"*", function(err, keys) {
+			if( callback ) return callback( keys );
+			return keys;
+		});
+
+	},
+
 	// FIX THIS: query not implemented for redis yet...
 	query: function( query, callback ){
 		var key = query.id || false;
