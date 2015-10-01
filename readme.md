@@ -1,5 +1,7 @@
 # Bodacious
 
+![Bodacious logo](https://github.com/makesites/bodacious)
+
 Job manager with multiple store support, based on Bull
 
 
