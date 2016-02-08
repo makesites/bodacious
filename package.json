@@ -29,6 +29,7 @@
 	},
 	"devDependencies": {
 		"expect.js": "~0.2.0",
+		"lodash": "~4.3.0",
 		"sinon": "~1.12.1",
 		"mocha": "~1.21.4"
 	}
