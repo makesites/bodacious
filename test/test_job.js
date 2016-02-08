@@ -7,7 +7,7 @@ describe('Job', function(){
   var queue;
 
   before(function(done){
-    queue = new Queue('test', 6379, '127.0.0.1');
+    queue = new Queue('test', { store: "redis" });
     queue.client.keys(queue.toKey('*'), function(err, keys){
       if(keys.length){
         queue.client.del(keys, function(err){
