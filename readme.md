@@ -1,5 +1,7 @@
 # Bodacious
 
+![Bodacious logo](http://i.imgur.com/imdhQOY.png)
+
 Job manager with multiple store support, based on Bull
 
 
