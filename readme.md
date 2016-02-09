@@ -21,7 +21,7 @@ npm install bodacious
 ## Usage
 
 ```
-var Queue = require('bull');
+var Queue = require('bodacious');
 
 var queue = Queue('job title');
 
