@@ -20,12 +20,10 @@
 		"postpublish": "git push && git push --tags"
 	},
 	"dependencies": {
-		"bluebird": "~2.3.0",
+		"async": "1.5.2",
 		"node-uuid": "~1.4.1",
-		"redis": "~0.8.4",
-		"semver": "^4.2.0",
-		"underscore": "1.8.0",
-		"when": "~2.1.1"
+		"redis": "0.8.6",
+		"underscore": "1.8.0"
 	},
 	"devDependencies": {
 		"expect.js": "~0.2.0",
