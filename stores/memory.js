@@ -62,7 +62,7 @@ var db = {
 
 	read: function( query, callback ){
 		query = query || {};
-		var key = query.id || "*";
+		var key = query || "*";
 		// return all
 		if( key == "*" ) return callback(null, data);
 		var value = query[key];
