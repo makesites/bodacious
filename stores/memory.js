@@ -72,7 +72,7 @@ var db = {
 	},
 
 	destroy: function( item, callback ){
-		var key = item.id || false;
+		var key = item || false;
 		if( !key ) return callback(null, false);
 		delete data[key];
 		// assume only one item for every key
