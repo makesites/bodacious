@@ -1,5 +1,6 @@
 // Defaults
 var config = {
+	delay: 0, // how much (milliseconds) to delay between executing jobs
 	lock: 5000, // renew time lock
 	timeout: 5000, // client close timeout
 	store: "memory", // options: memory, redis, filesystem, custom
