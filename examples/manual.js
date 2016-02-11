@@ -8,7 +8,7 @@ var queue = new Queue('my_queue', { autorun: false });
 
 // what to do with each job
 queue.process(function(job, done){
-	console.log("process job: ", job.id);
+	console.log("process job: ", job.id, job.data.timestamp);
 	done();
 });
 
@@ -19,7 +19,7 @@ var adding = setInterval(function () {
 	queue.add({ timestamp: timestamp });
 }, 100);
 
-// start queue in bursts (every 2 seconds)
+// execute queue in bursts (every 2 seconds)
 var processing = setInterval(function () {
 	console.log("PROCESS!!!")
 	queue.run();
