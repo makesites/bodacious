@@ -42,11 +42,14 @@ CRUD.prototype = {
 	},
 
 	read: function( query, callback ){
-		var key = query.id || "*";
+		var key = query || "*";
+
 		if( !key ) return callback(null, false); // how to return all data?
 		// connect to db
 		this.db.get( key, function(err, data){
 			if(err) return callback(err);
+			// fallback
+			data = data || "[]";
 			// parse data into an object
 			data = JSON.parse( data.toString() );
 			callback( null, data );
@@ -54,7 +57,7 @@ CRUD.prototype = {
 	},
 
 	destroy: function( item, callback ){
-		var key = item.id || false;
+		var key = item || false;
 		if( !key ) return callback(null, false);
 		// connect to db
 		this.db.del( key, function(err, data){
