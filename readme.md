@@ -2,12 +2,13 @@
 
 ![Bodacious logo](http://i.imgur.com/imdhQOY.png)
 
-Job manager with multiple store support, based on Bull
-
+Persistently add, pause, resume tasks on your server without the fear of loosing your memory data from a crash. Originally started as an _upgrade_ of [Bull](https://github.com/OptimalBits/bull) to support multiple stores.
 
 ## Features
 
 * Multi-store support
+* Serial or parallel execution
+* Auto-run when new jobs arrive
 
 ...
 
@@ -64,9 +65,8 @@ A queue emits also some useful events:
 .on('error', function(error) {
   // Error
 })
-.on('active', function(job, jobPromise){
+.on('active', function(job){
   // Job started
-  // You can use jobPromise.cancel() to abort this job.
 })
 .on('progress', function(job, progress){
   // Job progress updated!
