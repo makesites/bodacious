@@ -33,13 +33,14 @@ CRUD.prototype = {
 	// Helpers
 	// - list of items
 	list: function(prefix, callback){
-		var keys = Object.keys( data );
+		var items = Object.keys( data );
+		var keys = [];
 		// filter keys
 		if( !_.isEmpty(prefix) ){
-			for( var i in keys ){
+			for( var i in items ){
 				//
-				var valid = keys[i].indexOf( prefix ) == 0;
-				if( !valid ) delete keys[i];
+				var valid = items[i].indexOf( prefix ) == 0;
+				if( valid ) keys.push(items[i]);
 			}
 		}
 		callback( null, keys );
