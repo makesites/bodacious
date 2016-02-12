@@ -2,7 +2,7 @@
 
 ![Bodacious logo](http://i.imgur.com/imdhQOY.png)
 
-Persistently add, pause, resume tasks on your server without the fear of loosing your memory data from a crash. Originally started as an _upgrade_ of [Bull](https://github.com/OptimalBits/bull) to support multiple stores.
+Persistently add, pause, resume tasks on your server without the fear of loosing your memory data from a crash. Originally started as an _upgrade_ of [Bull](https://github.com/OptimalBits/bull) to [support multiple stores](https://github.com/OptimalBits/bull/issues/104).
 
 ## Features
 
