@@ -2,7 +2,7 @@
 
 ![Bodacious logo](http://i.imgur.com/imdhQOY.png)
 
-Persistently add, pause, resume tasks on your server without the fear of loosing your memory data from a crash. Originally started as an _upgrade_ of [Bull](https://github.com/OptimalBits/bull) to [support multiple stores](https://github.com/OptimalBits/bull/issues/104).
+Persistently add, pause, resume tasks on your server without the fear of loosing your memory data from a crash. Originally conceived as an _upgrade_ of [Bull](https://github.com/OptimalBits/bull) to [support multiple stores](https://github.com/OptimalBits/bull/issues/104).
 
 ## Features
 
@@ -24,7 +24,7 @@ npm install bodacious
 ```
 var Queue = require('bodacious');
 
-var queue = Queue('job title');
+var queue = Queue('my_queue'); // name should not have spaces...
 
 queue.process(function(job, done){
 	// execute asynchronously and report progress
