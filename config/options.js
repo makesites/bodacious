@@ -1,6 +1,7 @@
 // Defaults
 var config = {
 	autorun: true, // process new items in the queue automatically
+	concurrency: 1, // the number of concurrent jobs that can be processed
 	delay: 0, // how much (milliseconds) to delay between executing jobs
 	lock: 5000, // renew time lock
 	timeout: 5000, // client close timeout
