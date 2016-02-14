@@ -26,6 +26,10 @@ CRUD.prototype = {
 		this.db.read( query, callback );
 	},
 
+	update: function( data, callback ){
+		this.db.update( data, callback );
+	},
+
 	destroy: function(item, callback){
 		this.db.destroy( item, callback );
 	},
@@ -70,6 +74,14 @@ var db = {
 		// return specific
 		if( data[key] ) return callback(null, data[key]);
 		return callback(null, false);
+	},
+
+	update: function( item, callback ){
+		var key = item.id || false;
+		if( !key ) return callback(null, false);
+		// check if the item exists first?
+		data[key] = item;
+		return callback(null, true);
 	},
 
 	destroy: function( item, callback ){

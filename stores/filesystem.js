@@ -50,6 +50,18 @@ CRUD.prototype = {
 		});
 	},
 
+	update: function( data, callback ){
+		// fallbacks
+		data = data || {};
+		var key = data.id || false;
+		if( !key ) return callback(null, false);
+		fs.writeFile(this.dir + key, JSON.stringify( data ), function(err) {
+			// error control
+			if(err) console.log(err);
+			callback();
+		});
+	},
+
 	destroy: function(key, callback){
 		fs.unlink(this.dir + key, function (err) {
 			if (err) throw err;

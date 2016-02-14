@@ -56,6 +56,21 @@ CRUD.prototype = {
 		});
 	},
 
+	update: function( data, callback ){
+		// fallbacks
+		data = data || {};
+		var key = data.id || false;
+		if( !key ) return callback(null, false);
+		// stringify data
+		data = JSON.stringify(data);
+		// connect to db
+		this.db.set( key, data, function(err, result){
+			if(err) return callback(err);
+			// error control?
+			return callback( null, true );
+		});
+	},
+
 	destroy: function( item, callback ){
 		var key = item || false;
 		if( !key ) return callback(null, false);
