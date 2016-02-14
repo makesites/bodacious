@@ -48,11 +48,11 @@ queue.add({ ...[data]... });
 A queue can be paused and resumed:
 
 ```
-queue.pause().then(function(){
+queue.pause(function(){
   // queue is paused now
 });
 
-queue.resume().then(function(){
+queue.resume(function(){
   // queue is resumed now
 });
 ```
