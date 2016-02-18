@@ -1,6 +1,6 @@
 # Bodacious
 
-![Bodacious logo](http://i.imgur.com/imdhQOY.png)
+![logo](http://cdn.makesites.org/media/project/bodacious/bodacious-logo-2k.png)
 
 Persistently add, pause, resume tasks on your server without the fear of loosing your memory data from a crash. Originally conceived as an _upgrade_ of [Bull](https://github.com/OptimalBits/bull) to [support multiple stores](https://github.com/OptimalBits/bull/issues/104).
 
